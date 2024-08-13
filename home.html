@@ -1,0 +1,331 @@
+Videos
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Yippsie</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<img src="yippsie logo.png" alt="Yippsie Logo">
+			<span>Yippsie</span>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#videos">Videos</a></li>
+				<li><a href="#posts">Posts</a></li>
+				<li><a href="#stats">Stats</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="videos">
+			<h2>Videos</h2>
+			<div class="video-container">
+				<!-- Video thumbnails and titles will be displayed here -->
+			</div>
+		</section>
+	</main>
+</body>
+</html>
+
+
+Profile
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Yippsie - Posts</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<img src="yippsie logo.png" alt="Yippsie Logo">
+			<span>Yippsie</span>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#videos">Videos</a></li>
+				<li><a href="#posts">Posts</a></li>
+				<li><a href="#stats">Stats</a></li>
+
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="posts">
+			<h2>Posts</h2>
+			<div class="post-container">
+				<!-- User posts will be displayed here -->
+			</div>
+		</section>
+	</main>
+</body>
+</html>
+
+
+All Stats 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Yippsie - Stats</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<img src="yippsie logo.png" alt="yippsie logo">
+			<span>Yippsie</span>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#videos">Videos</a></li>
+				<li><a href="#posts">Posts</a></li>
+				<li><a href="#stats">Stats</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="stats">
+			<h2>Stats</h2>
+			<div class="stats-container">
+				<!-- User statistics will be displayed here -->
+			</div>
+		</section>
+	</main>
+</body>
+</html>
+
+Yippsie Sign Up/Login
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Yippsie</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<img src="yippsie logo.png" alt="Yippsie Logo">
+			<span>Yippsie</span>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#login" class="login-button">Login/Sign Up</a></li>
+				<li><input type="search" placeholder="Search" class="search-input"></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<!-- Content will be displayed here -->
+	</main>
+	<!-- Login/Sign Up Modal -->
+	<div class="modal" id="login-modal">
+		<div class="modal-content">
+			<h2>Login/Sign Up</h2>
+			<form>
+				<input type="email" placeholder="Email" required>
+				<input type="password" placeholder="Password" required>
+				<button>Login</button>
+				<p>Don't have an account? <a href="#signup">Sign Up</a></p>
+			</form>
+		</div>
+	</div>
+	<!-- Sign Up Modal -->
+	<div class="modal" id="signup-modal">
+		<div class="modal-content">
+			<h2>Sign Up</h2>
+			<form>
+				<input type="email" placeholder="Email" required>
+				<input type="password" placeholder="Password" required>
+				<input type="phone" placeholder="Phone Number" required>
+				<button>Sign Up</button>
+			</form>
+		</div>
+	</div>
+	<!-- Login Success Indicator -->
+	<div class="login-success" id="login-success">
+		<div class="black-light"></div>
+		<div class="yellow-light"></div>
+	</div>
+	<script>
+		// Login/Sign Up Modal Toggle
+		document.querySelector('.login-button').addEventListener('click', () => {
+			document.getElementById('login-modal').style.display = 'block';
+		});
+		document.querySelector('.close').addEventListener('click', () => {
+			document.getElementById('login-modal').style.display = 'none';
+		});
+		// Sign Up Modal Toggle
+		document.querySelector('#signup').addEventListener('click', () => {
+			document.getElementById('signup-modal').style.display = 'block';
+		});
+		document.querySelector('.close').addEventListener('click', () => {
+			document.getElementById('signup-modal').style.display = 'none';
+		});
+		// Login Success Indicator
+		document.querySelector('button[type="submit"]').addEventListener('click', () => {
+			document.getElementById('login-success').style.display = 'block';
+			setTimeout(() => {
+				document.getElementById('login-success').style.display = 'none';
+			}, 3000);
+		});
+	</script>
+</body>
+</html>
+
+
+<Style>
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+header {
+	background-color: #614c4c;
+	color: #705252;
+	padding: 1em;
+	text-align: center;
+}
+.logo {
+	display: flex;
+	align-items: center;
+}
+.logo img {
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+}
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+}
+nav li {
+	margin-right: 20px;
+}
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	padding: 2em;
+}
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+}
+.modal-content {
+	background-color: #fff;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+.login-success {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgb(105, 63, 63);
+}
+
+Style>
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 1em;
+	text-align: center;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo img {
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	padding: 2em;
+}
+
+.video-container, .post-container, .stats-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.video-thumbnail, .post {
+	margin: 10px;
+	width: 200px;
+	height: 29px;}
+
+	
